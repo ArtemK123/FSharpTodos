@@ -1,10 +1,11 @@
 ﻿[<AutoOpen>]
 module Server.UseCases.AddTodo
 
-let addTodo (storage: Server.Storage.Storage) =
-    fun todo ->
-        async {
-            match storage.AddTodo todo with
-            | Ok () -> return todo
-            | Error e -> return failwith e
-        };
+open Shared
+
+let addTodo (storage: Server.Storage.Storage) todo =
+    if Todo.isValid todo.Description then
+        storage.AddTodo todo
+        Ok(todo)
+    else
+        Error Shared.Error.InvalidTodo
