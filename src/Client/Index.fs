@@ -1,6 +1,6 @@
-module Index
+module Client.Index
 
-open Components
+open Client.Components
 open State
 open Routing
 open Feliz

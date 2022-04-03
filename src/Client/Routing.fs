@@ -1,4 +1,4 @@
-﻿module Routing
+﻿module Client.Routing
 
 open Feliz.Router
 

@@ -1,4 +1,4 @@
-﻿module Components.BackgroundContainer
+﻿module Client.Components.BackgroundContainer
 
 open Feliz
 open Feliz.Bulma

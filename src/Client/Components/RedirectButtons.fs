@@ -1,4 +1,4 @@
-﻿module RedirectButtons
+﻿module Client.RedirectButtons
 
 open Routing
 open Feliz

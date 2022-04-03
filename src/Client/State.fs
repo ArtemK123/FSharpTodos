@@ -1,4 +1,4 @@
-﻿module State
+﻿module Client.State
 
 open Shared
 open Elmish

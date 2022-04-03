@@ -1,8 +1,8 @@
-﻿module Components.TestPage
+﻿module Client.Components.TestPage
 
 open Feliz
 open Feliz.Bulma
-open State
+open Client.State
 
 let render (_: Model) (_: Msg -> unit) =
     BackgroundContainer.render [
@@ -13,7 +13,7 @@ let render (_: Model) (_: Msg -> unit) =
                     text.hasTextCentered
                     prop.children [
                         Bulma.block "Test"
-                        RedirectButtons.ToHomePage.render
+                        Client.RedirectButtons.ToHomePage.render
                     ]
                 ]
             ]

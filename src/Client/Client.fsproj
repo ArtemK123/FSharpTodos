@@ -13,8 +13,8 @@
         <Compile Include="Components\RedirectButtons.fs" />
         <Compile Include="Components\NotFoundPage.fs" />
         <Compile Include="Components\TestPage.fs" />
-        <Compile Include="Components\TodoAppPage.fs" />
         <Compile Include="Components\HomePage.fs" />
+        <Compile Include="Components\TodoAppPage.fs" />
         <Compile Include="Index.fs" />
         <Compile Include="App.fs" />
     </ItemGroup>
