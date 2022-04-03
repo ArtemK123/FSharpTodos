@@ -2,7 +2,6 @@
 
 open Feliz
 open Feliz.Bulma
-open Feliz.Router
 open State
 
 let render (_: Model) (_: Msg -> unit) =
@@ -25,18 +24,10 @@ let render (_: Model) (_: Msg -> unit) =
                                 Bulma.block "Home page of SAFE stack demo app"
                                 Bulma.block "Made by ArtemK123"
                                 Bulma.block [
-                                    Bulma.button.button [
-                                        Bulma.color.isPrimary
-                                        prop.text "Go to Todo app"
-                                        prop.onClick (fun _ -> Router.navigate("todoapp"))
-                                    ]
+                                    RedirectButtons.ToTodoAppPage.render
                                 ]
                                 Bulma.block [
-                                    Bulma.button.button [
-                                        Bulma.color.isPrimary
-                                        prop.text "Go to Test page"
-                                        prop.onClick (fun _ -> Router.navigate("test"))
-                                    ]
+                                    RedirectButtons.ToTestPage.render
                                 ]
                             ]
                         ]

@@ -2,7 +2,6 @@
 
 open Feliz
 open Feliz.Bulma
-open Feliz.Router
 open State
 
 let render (_: Model) (_: Msg -> unit) =
@@ -24,11 +23,7 @@ let render (_: Model) (_: Msg -> unit) =
                                 Bulma.block "Test"
                             ]
                         ]
-                        Bulma.button.button [
-                            Bulma.color.isPrimary
-                            prop.text "Go to Home page"
-                            prop.onClick (fun _ -> Router.navigate(""))
-                        ]
+                        RedirectButtons.ToHomePage.render
                     ]
                 ]
             ]
