@@ -5,14 +5,16 @@ open Feliz.Bulma
 open State
 
 let render (_: Model) (_: Msg -> unit) =
-    Bulma.container [
-        container.isWidescreen
-        prop.children [
-            Bulma.box [
-                text.hasTextCentered
-                prop.children [
-                    Bulma.block "Test"
-                    RedirectButtons.ToHomePage.render
+    BackgroundContainer.render [
+        Bulma.container [
+            container.isWidescreen
+            prop.children [
+                Bulma.box [
+                    text.hasTextCentered
+                    prop.children [
+                        Bulma.block "Test"
+                        RedirectButtons.ToHomePage.render
+                    ]
                 ]
             ]
         ]

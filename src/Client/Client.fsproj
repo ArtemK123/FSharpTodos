@@ -9,6 +9,7 @@
         <None Include="paket.references" />
         <Compile Include="State.fs" />
         <Compile Include="Routing.fs" />
+        <Compile Include="Components\BackgroundContainer.fs" />
         <Compile Include="Components\RedirectButtons.fs" />
         <Compile Include="Components\NotFoundPage.fs" />
         <Compile Include="Components\TestPage.fs" />
