@@ -7,7 +7,6 @@ type Todo = { Id: Guid; Description: string; IsCompleted: bool }
 type Error =
     | NotFoundTodo
     | InvalidTodo
-    | None
 
 module Todo =
     let isValid (description: string) =
@@ -24,6 +23,6 @@ module Route =
 
 
 type ITodosApi =
-    { getTodos: unit -> Async<Result<Todo list, Error>>
+    { getTodos: unit -> Async<Todo list>
       addTodo: Todo -> Async<Result<Todo, Error>>
       completeTodo: Guid -> Async<Result<Todo, Error>> }

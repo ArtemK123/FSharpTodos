@@ -9,9 +9,10 @@
     <Compile Include="Storage.fs" />
     <Compile Include="UseCases\GetTodos.fs" />
     <Compile Include="UseCases\AddTodo.fs" />
+    <Compile Include="UseCases\GetTodo.fs" />
     <Compile Include="UseCases\CompleteTodo.fs" />
     <Compile Include="Seeders.fs" />
-    <Compile Include="Server.fs" />
+    <Compile Include="ServerApp.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.fsproj" />

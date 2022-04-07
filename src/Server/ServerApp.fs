@@ -1,4 +1,4 @@
-module Server
+module ServerApp
 
 open Fable.Remoting.Server
 open Fable.Remoting.Giraffe
@@ -14,8 +14,7 @@ seedTodos storage
 let todosApi: ITodosApi =
     { getTodos = fun _ -> async { return getTodos storage }
       addTodo = fun todo -> async { return addTodo storage todo }
-      completeTodo = fun todoGuid -> async { return completeTodo storage todoGuid }
-    }
+      completeTodo = fun todoGuid -> async { return completeTodo storage todoGuid } }
 
 let webApp =
     Remoting.createApi ()

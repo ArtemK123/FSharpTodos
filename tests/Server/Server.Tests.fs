@@ -1,9 +1,9 @@
-module Server.Tests
+module ServerApp.Tests
 
 open Expecto
 
+open Server.Storage
 open Shared
-open Server
 
 let server = testList "Server" [
     testCase "Adding valid Todo" <| fun _ ->
@@ -13,14 +13,14 @@ let server = testList "Server" [
 
         let result = storage.AddTodo validTodo
 
-        Expect.equal result expectedResult "Result should be ok"
+        Expect.equal result expectedResult.OkValue "Result should be ok"
         Expect.contains (storage.GetTodos()) validTodo "Storage should contain new todo"
 ]
 
 let all =
     testList "All"
         [
-            Shared.Tests.shared
+            Tests.shared
             server
         ]
 
